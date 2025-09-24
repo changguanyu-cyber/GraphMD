@@ -21,3 +21,12 @@ data/
 └── C3D_features/
 ```
 
+3. Extracting the `.npy` files.  Place all `.npy` files into the `data/` directory as follows:
+
+```
+data/
+├── ActivityNet/
+│ └── C3D_features/
+└── TACoS/
+└── C3D_features/
+```
