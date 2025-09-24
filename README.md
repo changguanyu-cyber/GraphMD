@@ -8,7 +8,7 @@ Source code for our
 # Download and prepare the datasets
 1. Download the datasets:
 
-   - [MD17](https://example.com/ActivityNet_C3D.zip)
+   - [MD17](https://figshare.com/articles/Revised_MD17_dataset_rMD17_/12672038/3)
 
 2. After downloading, unzip the files and place them under the `data/` directory:
 
