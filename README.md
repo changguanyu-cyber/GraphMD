@@ -6,3 +6,4 @@ Source code for our
 # Approach
 
 # Download and prepare the datasets
+1. Download the MD17 dataset.
