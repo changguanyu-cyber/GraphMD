@@ -2,7 +2,7 @@
 Source code for our 
 
 **Task Example**: A two-module molecular dynamics simulation approach: a molecular graph interaction module enhanced with classical potential functions, and a diffusion module that leverages the Discrete Cosine Transform (DCT) to better capture smooth molecular motions.
-![描述文字](fig_main2.pdf)
+![描述文字](fig_main2.png)
 
 # Approach
 
