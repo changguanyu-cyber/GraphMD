@@ -7,6 +7,9 @@ Source code for our
 
 # Download and prepare the datasets
 1. Download the MD17 dataset.
-   
-**[点击这里下载数据集](https://example.com/dataset.zip)**
+   The video feature provided by 2D-TAN
+
+- [ActivityNet Captions C3D feature](https://example.com/ActivityNet_C3D.zip)
+- [TACoS C3D feature](https://example.com/TACoS_C3D.zip)
+
 
