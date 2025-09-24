@@ -45,11 +45,9 @@ tqdm
 You can start training our two modules by using the following two commands, respectively:
 
 ```
-data/
 python train 1
 ```
 
 ```
-data/
 python train 2
 ```
