@@ -75,5 +75,5 @@ After generating molecular graphs, you should have a ready model in `/root/diffu
 ## Diffusion Module
 ```
 cd /root/diffusion
-python main.py --cfg mol --mode pred  --ckpt ./results/ready_model/models/ckpt_ema_60.pt 
+python main.py --cfg mol --mode pred  --ckpt ./results/ready_model/models/ckpt_ema.pt 
 ```
