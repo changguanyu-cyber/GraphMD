@@ -58,7 +58,22 @@ python train.py
 ## Diffusion Module
 ```
 cd /root/diffusion
-python main.py --mode train
+python main.py --mode train --cfg mol
 ```
 
 # Sampling
+
+
+## Molecular Graph Interaction Module
+```
+cd /root/MG_interaction
+python gen.py
+```
+
+After generating molecular graphs, you should have a ready model in `/root/diffusion/results`. Putting the graphs into `/root/diffusion/inference/result_.npy`. Then start sampling by using the following command:
+
+## Diffusion Module
+```
+cd /root/diffusion
+python main.py --cfg mol --mode pred  --ckpt ./results/ready_model/models/ckpt_ema_60.pt 
+```
