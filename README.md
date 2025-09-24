@@ -44,10 +44,12 @@ tqdm
 # Training
 You can start training our two modules by using the following two commands, respectively:
 
+## Molecular Graph Interaction Module
 ```
 python train 1
 ```
 
+## Diffusion Module
 ```
 python train 2
 ```
