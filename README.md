@@ -7,10 +7,15 @@ Source code for our
 
 # Download and prepare the datasets
 1. Download the MD17 dataset.
-   
-   The video feature provided by 2D-TAN
 
 - [ActivityNet Captions C3D feature](https://example.com/ActivityNet_C3D.zip)
-- [TACoS C3D feature](https://example.com/TACoS_C3D.zip)
+
+After downloading, unzip the files and place them under the `data/` directory:
+
+data/
+├── ActivityNet/
+│   └── C3D_features/
+└── TACoS/
+    └── C3D_features/
 
 
