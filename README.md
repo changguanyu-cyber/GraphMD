@@ -34,11 +34,16 @@ root/
 we recommend installing the following packages:
 
 ```
-Python >= 3.8
-PyTorch >= 1.10
-torchvision
-numpy
-tqdm
+python == 3.8
+torch == 1.8.0
+schnetpack == 2.0.4
+torchvision == 0.9.0
+numpy == 1.24.4
+tqdm == 4.67.1
+torch_geometric == 2.0.4
+torch-scatter == 2.0.6
+torch-sparse == 0.6.10
+torch-spline-conv == 1.2.1
 ```
 
 # Training
