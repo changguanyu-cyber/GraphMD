@@ -31,3 +31,12 @@ data/
 └── C3D_features/
 ```
 # Dependencies
+we recommend the following packages are installed:
+
+```
+Python >= 3.8
+PyTorch >= 1.10
+torchvision
+numpy
+tqdm
+```
