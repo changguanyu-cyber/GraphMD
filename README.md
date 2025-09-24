@@ -8,8 +8,7 @@ Source code for our
 # Download and prepare the datasets
 1. Download the datasets:
 
-   - [ActivityNet Captions C3D feature](https://example.com/ActivityNet_C3D.zip)
-   - [TACoS C3D feature](https://example.com/TACoS_C3D.zip)
+   - [MD17](https://example.com/ActivityNet_C3D.zip)
 
 2. After downloading, unzip the files and place them under the `data/` directory:
 
