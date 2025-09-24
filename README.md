@@ -51,12 +51,14 @@ You can start training our two modules by using the following two commands, resp
 
 ## Molecular Graph Interaction Module
 ```
-python train 1
+cd /root/MG_interaction
+python train.py
 ```
 
 ## Diffusion Module
 ```
-python train 2
+cd /root/diffusion
+python main.py --mode train
 ```
 
 # Sampling
