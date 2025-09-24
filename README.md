@@ -10,7 +10,7 @@ Source code for our
 
 - [ActivityNet Captions C3D feature](https://example.com/ActivityNet_C3D.zip)
 
-After downloading, unzip the files and place them under the `data/` directory:
+2.After downloading, unzip the files and place them under the `data/` directory:
 
 data/
 ├── ActivityNet/
