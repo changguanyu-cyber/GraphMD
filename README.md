@@ -31,7 +31,7 @@ data/
 └── C3D_features/
 ```
 # Dependencies
-we recommend the following packages are installed:
+we recommend installing the following packages:
 
 ```
 Python >= 3.8
