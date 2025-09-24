@@ -53,3 +53,5 @@ python train 1
 ```
 python train 2
 ```
+
+# Sampling
