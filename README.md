@@ -20,14 +20,15 @@ root/
 └── MG_interaction/
 ```
 
-3. Extracting the `.npy` files.  Place all `.npy` files into the `data/` directory as follows:
+3. Extracting the `.npy` files.  Place all `.npy` files into the `root/` directory as follows:
 
 ```
-data/
-├── ActivityNet/
-│ └── C3D_features/
-└── TACoS/
-└── C3D_features/
+root/
+├── extracted_data/
+│ └── aspirin_coord.npy/
+└── rmd17/
+└── diffusion/
+└── MG_interaction/
 ```
 # Dependencies
 we recommend installing the following packages:
