@@ -10,14 +10,14 @@ Source code for our
 
    - [MD17](https://figshare.com/articles/Revised_MD17_dataset_rMD17_/12672038/3)
 
-2. After downloading, unzip the files and place them under the `data/` directory:
+2. After downloading, unzip the files and place them under the `root/` directory:
 
 ```
-data/
-├── ActivityNet/
-│ └── C3D_features/
-└── TACoS/
-└── C3D_features/
+root/
+├── rmd17/
+│ └── rmd17_aspirin.npz/
+└── diffusion/
+└── MG_interaction/
 ```
 
 3. Extracting the `.npy` files.  Place all `.npy` files into the `data/` directory as follows:
