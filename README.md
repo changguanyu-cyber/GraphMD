@@ -6,16 +6,17 @@ Source code for our
 # Approach
 
 # Download and prepare the datasets
-1. Download the MD17 dataset.
+1. Download the datasets:
 
-- [ActivityNet Captions C3D feature](https://example.com/ActivityNet_C3D.zip)
+   - [ActivityNet Captions C3D feature](https://example.com/ActivityNet_C3D.zip)
+   - [TACoS C3D feature](https://example.com/TACoS_C3D.zip)
 
-2.After downloading, unzip the files and place them under the `data/` directory:
+2. After downloading, unzip the files and place them under the `data/` directory:
 
-'''data/
+data/
 ├── ActivityNet/
-│   └── C3D_features/
+│ └── C3D_features/
 └── TACoS/
-    └── C3D_features/'''
+└── C3D_features/
 
 
