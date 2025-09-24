@@ -13,7 +13,7 @@ Source code for our
 
 2. After downloading, unzip the files and place them under the `data/` directory:
 
-data/
+'''data/
 ├── ActivityNet/
 │ └── C3D_features/
 └── TACoS/
