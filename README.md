@@ -6,7 +6,7 @@ Source code for our
 
 # Approach
 
-![描述文字](fig_main2-1.png)
+![描述文字](fig_main2.png)
 
 # Download and prepare the datasets
 1. Download the datasets:
