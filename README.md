@@ -8,7 +8,7 @@ Source code for our
 
 Overview of the proposed GraphMD. We encode temporal trajectories using the Discrete Cosine Transform (DCT) to extract dominant low-frequency motions. And we further incorporate guiding terms based on Morse and Lennard-Jones (LJ) potentials to impose soft physical constraints during graph processing, enabling the model to integrate meaningful physical priors and obtain effective guidance before adding noise during sampling.
 
-![描述文字](fig_main2.png)
+
 
 # Download and prepare the datasets
 1. Download the datasets:
