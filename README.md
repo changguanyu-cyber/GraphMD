@@ -2,6 +2,11 @@
 
 **Task Example**: A two-module molecular dynamics simulation approach: a molecular graph interaction module enhanced with classical potential functions, and a diffusion module that leverages the Discrete Cosine Transform (DCT) to better capture smooth molecular motions.
 
+```
+ Two important characteristics:
+ 1) Potential energies: Obtaining effective guidance before adding noise;
+ 2) DCT in sampling: Extracting dominant low-frequency motions to make MD simulation smoother.
+```
 
 # Approach
 
