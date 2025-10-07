@@ -78,7 +78,7 @@ python main.py --mode train --cfg mol
 ## Molecular Graph Interaction Module
 ```
 cd /root/MG_interaction
-python gen.py
+python gen_graph.py
 ```
 
 After generating molecular graphs, you should have a ready model in `/root/diffusion/results`. Putting the graphs into `/root/diffusion/inference/result_.npy`. Then start sampling by using the following command:
