@@ -17,7 +17,7 @@ from scipy.spatial.distance import pdist, squareform
 
 def create_model_and_diffusion(cfg,args):
     """
-    create TransLinear model and Diffusion
+    create  Diffusion
     """
     if args.mode == 'train':
         model = MotionTransformer(
@@ -66,11 +66,7 @@ def create_model_and_diffusion(cfg,args):
 
 
 def dataset_split(cfg):
-    """
-    output: dataset_dict, dataset_multi_test
-    dataset_dict has two keys: 'train', 'test' for enumeration in train and validation.
-    dataset_multi_test is used to create multi-modal data for metrics.
-    """
+   
     dataset_cls = DatasetH36M if cfg.dataset == 'h36m' else DatasetHumanEva
     dataset = dataset_cls('train', cfg.t_his, cfg.t_pred, actions='all')
     dataset_test = dataset_cls('test', cfg.t_his, cfg.t_pred, actions='all')
@@ -122,9 +118,7 @@ def get_multimodal_gt_full(logger, dataset_multi_test, args, cfg):
 
 
 def display_exp_setting(logger, cfg):
-    """
-    log the current experiment settings.
-    """
+    
     logger.info('=' * 80)
     log_dict = cfg.__dict__.copy()
     for key in list(log_dict):
@@ -137,13 +131,7 @@ def display_exp_setting(logger, cfg):
 
 
 def sample_preprocessing(traj, cfg, mode):
-    """
-    This function is used to preprocess traj for sample_ddim().
-    input : traj_seq, cfg, mode
-    output: a dict for specific mode,
-            traj_dct,
-            traj_dct_mod
-    """
+    
     if mode.split('_')[0] == 'fix':
 
         # skeleton joints in h36m
@@ -317,3 +305,4 @@ def sample_preprocessing(traj, cfg, mode):
                 'mode': 'metrics'}, traj_dct, traj_dct_mod
     else:
         raise NotImplementedError(f"unknown purpose for sampling: {mode}")
+
