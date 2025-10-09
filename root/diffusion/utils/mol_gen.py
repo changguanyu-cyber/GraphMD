@@ -4,12 +4,7 @@ from utils.script import sample_preprocessing
 
 def mol_generator(data_set, model_select, diffusion, cfg, mode=None,
                    action=None, nrow=1):
-    """
-    stack k rows examples in one gif
-
-    The logic of 'draw_order_indicator' is to cheat the render_animation(),
-    because this render function only identify the first two as context and gt, which is a bit tricky to modify.
-    """
+    
     traj_np = None
     j = None
     all_generated_trajectories = []
