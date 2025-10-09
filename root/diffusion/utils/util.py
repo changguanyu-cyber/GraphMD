@@ -41,11 +41,7 @@ def padding_traj(traj, padding, idx_pad, zero_index):
 
 
 def post_process(pred, cfg, first_frame):
-    """
-    pred: (B, T, 8, 9)
-    ref_distances: (1, 1, 1, 9) — 第一个原子与其他原子的标准距离向量
-    return: (B, T, 9, 9)
-    """
+   
 
     B,T = first_frame.shape[0], first_frame.shape[1]
     first_frame = first_frame.reshape(T,1,3)
@@ -76,16 +72,7 @@ def get_dct_matrix(N, is_torch=True):
 
 
 def _pairwise_distances(embeddings, squared=False):
-    """Compute the 2D matrix of distances between all the embeddings.
-
-    Args:
-        embeddings: tensor of shape (batch_size, embed_dim)
-        squared: Boolean. If true, output is the pairwise squared euclidean distance matrix.
-                 If false, output is the pairwise euclidean distance matrix.
-
-    Returns:
-        pairwise_distances: tensor of shape (batch_size, batch_size)
-    """
+   
     dot_product = torch.matmul(embeddings, embeddings.t())
 
     # Get squared L2 norm for each embedding. We can just take the diagonal of `dot_product`.
@@ -113,32 +100,13 @@ def _pairwise_distances(embeddings, squared=False):
 
 
 def _pairwise_distances_l1(embeddings, squared=False):
-    """Compute the 2D matrix of distances between all the embeddings.
-
-    Args:
-        embeddings: tensor of shape (batch_size, embed_dim)
-        squared: Boolean. If true, output is the pairwise squared euclidean distance matrix.
-                 If false, output is the pairwise euclidean distance matrix.
-
-    Returns:
-        pairwise_distances: tensor of shape (batch_size, batch_size)
-    """
+    
     distances = torch.abs(embeddings[None, :, :] - embeddings[:, None, :])
     return distances
 
 
 def expmap2rotmat(r):
-    """
-    Converts an exponential map angle to a rotation matrix
-    Matlab port to python for evaluation purposes
-    I believe this is also called Rodrigues' formula
-    https://github.com/asheshjain399/RNNexp/blob/srnn/structural_rnn/CRFProblems/H3.6m/mhmublv/Motion/expmap2rotmat.m
-
-    Args
-      r: 1x3 exponential map
-    Returns
-      R: 3x3 rotation matrix
-    """
+  
     theta = np.linalg.norm(r)
     r0 = np.divide(r, theta + np.finfo(np.float32).eps)
     r0x = np.array([0, -r0[2], r0[1], 0, 0, -r0[0], 0, 0, 0]).reshape(3, 3)
@@ -148,11 +116,7 @@ def expmap2rotmat(r):
 
 
 def absolute2relative(x, parents, invert=False, x0=None):
-    """
-    x: [bs,..., jn, 3] or [bs,..., jn-1, 3] if invert
-    x0: [1,..., jn, 3]
-    parents: [-1,0,1 ...]
-    """
+ 
     if not invert:
         xt = x[..., 1:, :] - x[..., parents[1:], :]
         xt = xt / np.linalg.norm(xt, axis=-1, keepdims=True)
@@ -169,11 +133,7 @@ def absolute2relative(x, parents, invert=False, x0=None):
 
 
 def absolute2relative_torch(x, parents, invert=False, x0=None):
-    """
-    x: [bs,..., jn, 3] or [bs,..., jn-1, 3] if invert
-    x0: [1,..., jn, 3]
-    parents: [-1,0,1 ...]
-    """
+   
     if not invert:
         xt = x[..., 1:, :] - x[..., parents[1:], :]
         xt = xt / torch.norm(xt, dim=-1, keepdim=True)
