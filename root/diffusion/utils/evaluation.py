@@ -16,10 +16,7 @@ zeros = torch.zeros
 
 
 def compute_stats(diffusion, multimodal_dict, model, logger, cfg):
-    """
-    The GPU is strictly needed because we need to give predictions for multiple samples in parallel and repeat for
-    several (K=50) times.
-    """
+    
 
     # TODO reduce computation complexity
     def get_prediction(data, model_select):
