@@ -6,9 +6,7 @@ from utils.mol_gen import mol_generator
 
 def demo_visualize(mode, cfg, model, diffusion, dataset):
 
-    """
-    script for drawing gifs in different modes
-    """
+
 
 
     mol_list = dataset['test'].prepare_iter_action(cfg.dataset)
@@ -19,4 +17,5 @@ def demo_visualize(mode, cfg, model, diffusion, dataset):
         suffix = mol_list[i]
 
             
+
 
