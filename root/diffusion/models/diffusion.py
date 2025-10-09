@@ -186,36 +186,7 @@ class Diffusion:
                     traj_dct,
                     traj_dct_mod,
                     mode_dict):
-        """
-        Generate samples from the model.
-
-        Args:
-            model: the model to predict noise
-            traj_dct: DCT coefficient of the traj,
-                shape as [sample_num, n_pre, 3 * joints_num]
-            traj_dct_mod: equal to traj_dct or None when no modulation
-            mode_dict: a dict containing the following keys:
-                 - 'mask': [[1, 1, ..., 0, 0, 0]
-                            [1, 1, ..., 0, 0, 0]
-                            ...
-                            [1, 1, ..., 0, 0, 0]], mask for observation
-                 - 'sample_num': sample_num for different modes
-                 - 'mode': mode name, e.g. 'pred', 'control'....
-                 when mode is 'switch', there are two additional keys:
-                 - 'traj_switch': traj to switch to
-                 - 'mask_end': [[0, 0, ...., 1, 1, 1]
-                                [0, 0, ...., 1, 1, 1]
-                                ...
-                                [0, 0, ...., 1, 1, 1]], mask for switch
-                 when mode is 'control', there are one additional key:
-                 - 'traj_fix': retained the fixed part of the traj
-                    and current mask will be:
-                                [[0, 0, ...., 1, 1, 1]
-                                [1, 1, ...., 1, 1, 1]
-                                ...
-                                [0, 0, ...., 1, 1, 1]]
-        Returns: sample
-        """
+        
         final = None
         for sample in self.sample_ddim_progressive(model,
                                                    traj_dct,
@@ -223,3 +194,4 @@ class Diffusion:
                                                    mode_dict):
             final = sample
         return final
+
