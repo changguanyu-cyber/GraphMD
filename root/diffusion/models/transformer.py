@@ -37,14 +37,7 @@ class EMA:
 
 
 def timestep_embedding(timesteps, dim, max_period=10000):
-    """
-    Create sinusoidal timestep embeddings.
-    :param timesteps: a 1-D Tensor of N indices, one per batch element.
-                      These may be fractional.
-    :param dim: the dimension of the output.
-    :param max_period: controls the minimum frequency of the embeddings.
-    :return: an [N x dim] Tensor of positional embeddings.
-    """
+    
     half = dim // 2
     freqs = torch.exp(
         -math.log(max_period) * torch.arange(start=0, end=half, dtype=torch.float32) / half
@@ -57,13 +50,7 @@ def timestep_embedding(timesteps, dim, max_period=10000):
 
 
 def set_requires_grad(nets, requires_grad=False):
-    """Set requies_grad for all the networks.
-
-    Args:
-        nets (nn.Module | list[nn.Module]): A list of networks or a single
-            network.
-        requires_grad (bool): Whether the networks require gradients or not
-    """
+    
     if not isinstance(nets, list):
         nets = [nets]
     for net in nets:
