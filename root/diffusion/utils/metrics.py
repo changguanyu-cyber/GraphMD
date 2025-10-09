@@ -6,17 +6,7 @@ import torch
 
 
 def compute_all_metrics(pred, gt, gt_multi):
-    """
-    calculate all metrics
-
-    Args:
-        pred: candidate prediction, shape as [50, t_pred, 3 * joints_num]
-        gt: ground truth, shape as [1, t_pred, 3 * joints_num]
-        gt_multi: multi-modal ground truth, shape as [multi_modal, t_pred, 3 * joints_num]
-
-    Returns:
-        diversity, ade, fde, mmade, mmfde
-    """
+ 
     if pred.shape[0] == 1:
         diversity = 0.0
     dist_diverse = torch.pdist(pred.reshape(pred.shape[0], -1))
@@ -43,3 +33,4 @@ def compute_all_metrics(pred, gt, gt_multi):
     fde = fde.mean()
 
     return diversity, ade, fde, mmade, mmfde
+
